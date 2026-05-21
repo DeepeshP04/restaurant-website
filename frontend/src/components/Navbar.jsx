@@ -9,7 +9,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="navbar bg-body-tertiary py-0">
+        <nav className="navbar bg-body-tertiary py-0 fixed-top">
   <div className="container-fluid bg-dark text-white py-3 px-10">
     <div className="d-flex align-items-center justify-content-evenly gap-3">
             <i class="fa-solid fa-utensils fs-3"></i>
