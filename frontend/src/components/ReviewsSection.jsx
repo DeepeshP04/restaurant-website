@@ -24,18 +24,18 @@ function ReviewsSection() {
       review: 'Exceptional quality food and excellent service. The presentation was beautiful and everything tasted fresh. Worth every penny!',
       rating: 5
     },
-    {
-      id: 5,
-      name: 'Lisa Martinez',
-      review: 'A gem of a restaurant! Every dish was prepared with care and attention. The flavors were outstanding!',
-      rating: 5
-    },
-    {
-      id: 6,
-      name: 'David Brown',
-      review: 'Great atmosphere and delicious food. The prices are reasonable for the quality. Definitely coming back soon.',
-      rating: 4
-    }
+    // {
+    //   id: 5,
+    //   name: 'Lisa Martinez',
+    //   review: 'A gem of a restaurant! Every dish was prepared with care and attention. The flavors were outstanding!',
+    //   rating: 5
+    // },
+    // {
+    //   id: 6,
+    //   name: 'David Brown',
+    //   review: 'Great atmosphere and delicious food. The prices are reasonable for the quality. Definitely coming back soon.',
+    //   rating: 4
+    // }
   ];
 
   const renderStars = (rating) => {
