@@ -16,7 +16,7 @@ function Navbar() {
             <i className="fa-solid fa-utensils fs-3"></i>
             <Link className="navbar-brand text-white" to="/">Restaurant</Link>
         </div>
-    <div className="nav-links d-flex justify-content-center gap-5 w-30">
+    <div className="nav-links d-flex justify-content-center gap-5 w-30" style={{ alignItems: 'center' }}>
             <Link to="/" className="nav-link text-uppercase fs-14 fw-semibold">Home</Link>
             <Link to="/menu" className="nav-link text-uppercase fs-14 fw-semibold">Menu</Link>
             <Link to="/book" className="nav-link text-uppercase fs-14 fw-semibold">Book</Link>
