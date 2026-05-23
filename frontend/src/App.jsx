@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Menu from "./pages/Menu"
 import Book from "./pages/Book"
 import Contact from "./pages/Contact"
+import Auth from "./pages/Auth"
 import Footer from "./components/Footer"
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/book" element={<Book />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       </div>
       <Footer />

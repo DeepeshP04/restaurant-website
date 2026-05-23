@@ -65,3 +65,27 @@
 .nav-link:hover .fa-cart-shopping {
   transform: scale(1.2);
 }
+
+/* Logout button styling */
+.btn-link {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  position: relative;
+  padding-bottom: 5px !important;
+}
+
+.btn-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6b35;
+  transition: width 0.3s ease;
+}
+
+.btn-link:hover::after {
+  width: 100%;
+}

@@ -1,12 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"
 
 function Navbar() {
-    const isLoggedIn = useState(false, setLoggedIn)
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    function setLoggedIn() {
-        return true
+    useEffect(() => {
+        // Check initial login state
+        const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+        setIsLoggedIn(loggedIn);
+
+        // Listen for login status changes
+        const handleLoginStatusChange = () => {
+            const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+            setIsLoggedIn(loggedIn);
+        };
+
+        window.addEventListener("loginStatusChanged", handleLoginStatusChange);
+        return () => window.removeEventListener("loginStatusChanged", handleLoginStatusChange);
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userEmail");
+        setIsLoggedIn(false);
     }
 
     return (
@@ -21,7 +38,22 @@ function Navbar() {
             <Link to="/menu" className="nav-link text-uppercase fs-14 fw-semibold">Menu</Link>
             <Link to="/book" className="nav-link text-uppercase fs-14 fw-semibold">Book</Link>
             <Link to="/contact" className="nav-link text-uppercase fs-14 fw-semibold">Contact</Link>
-            {isLoggedIn ? <Link to="#" className="nav-link text-uppercase fs-14 fw-semibold"><i className="fa-solid fa-cart-shopping"></i></Link> : <Link to="#" className="nav-link text-uppercase fs-14 fw-semibold">Login</Link>}
+            {isLoggedIn ? (
+                <>
+                    <Link to="#" className="nav-link text-uppercase fs-14 fw-semibold">
+                        <i className="fa-solid fa-cart-shopping"></i>
+                    </Link>
+                    <button 
+                        onClick={handleLogout} 
+                        className="nav-link text-uppercase fs-14 fw-semibold btn btn-link"
+                        style={{ color: '#fff', textDecoration: 'none' }}
+                    >
+                        Logout
+                    </button>
+                </>
+            ) : (
+                <Link to="/auth" className="nav-link text-uppercase fs-14 fw-semibold">Login</Link>
+            )}
         </div>
   </div>
 </nav>
