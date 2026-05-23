@@ -172,7 +172,7 @@ function Auth() {
 
             <form onSubmit={handleSignupSubmit}>
               <div className="mb-3">
-                <label htmlFor="fullName" className="form-label">Full Name</label>
+                <label htmlFor="email" className="form-label">Email</label>
                 <input
                   type="email"
                   className="form-control auth-input"
