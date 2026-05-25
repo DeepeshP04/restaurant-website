@@ -1,18 +1,52 @@
+.custom-navbar {
+  background: rgba(18, 18, 18, 0.96);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
 .px-10 {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
 }
 
-.fs-14 {
-    font-size: 14px !important;
+.fs-12 {
+  font-size: 12px !important;
+  letter-spacing: 1px;
 }
 
-/* Navbar Link Styling */
+/* BRAND */
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.brand-subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #cfcfcf;
+  margin-top: 2px;
+}
+
+.fa-utensils {
+  color: #ff6b35;
+  transition: 0.3s ease;
+}
+
+.fa-utensils:hover {
+  transform: rotate(15deg);
+}
+
+/* NAV LINKS */
+
 .nav-link {
   position: relative;
-  transition: color 0.3s ease;
   color: #fff !important;
   text-decoration: none;
+  transition: 0.3s ease;
   padding-bottom: 5px;
 }
 
@@ -20,72 +54,184 @@
   color: #ff6b35 !important;
 }
 
-/* Underline animation on hover */
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: 0;
   left: 0;
-  width: 0;
+  bottom: 0;
+  width: 0%;
   height: 2px;
-  background-color: #ff6b35;
-  transition: width 0.3s ease;
+  background: #ff6b35;
+  transition: 0.3s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
 
-/* Navbar brand styling */
-.navbar-brand {
-  font-size: 1.5rem !important;
-  font-weight: 700;
-  transition: color 0.3s ease;
+/* DROPDOWN */
+
+.nav-dropdown {
+  position: relative;
 }
 
-.navbar-brand:hover {
-  color: #ff6b35 !important;
+.dropdown-toggle-custom {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* Navbar icon styling */
-.fa-utensils {
+.dropdown-toggle-custom:hover {
   color: #ff6b35;
-  transition: transform 0.3s ease;
 }
 
-.fa-utensils:hover {
-  transform: rotate(15deg);
+.dropdown-icon {
+  padding-left: 6px;
+  font-size: 10px;
 }
 
-/* Shopping cart icon hover */
+.dropdown-menu-custom {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  min-width: 220px;
+
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+
+  border-radius: 16px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: 0.3s ease;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.show-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item-custom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 18px;
+
+  text-decoration: none;
+  color: white;
+
+  transition: 0.3s ease;
+  font-size: 13px;
+}
+
+.dropdown-item-custom:hover {
+  background: rgba(255, 107, 53, 0.1);
+  color: #ff6b35;
+}
+
+.dropdown-item-custom i {
+  color: #ff6b35;
+}
+
+/* BUTTONS */
+
+.book-btn,
+.login-btn,
+.logout-btn {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 22px;
+
+  border-radius: 50px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.book-btn {
+  background: #ff6b35;
+  color: white;
+}
+
+.book-btn:hover {
+  background: #ff824f;
+  transform: translateY(-2px);
+}
+
+.login-btn {
+  border: 1px solid #ff6b35;
+  background: transparent;
+  color: white;
+}
+
+.login-btn:hover,
+.logout-btn:hover {
+  background: #ff6b35;
+}
+
+.logout-btn {
+  border: 1px solid #ff6b35;
+  background: transparent;
+  color: white;
+}
+
+/* CART */
+
 .fa-cart-shopping {
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-link:hover .fa-cart-shopping {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
-/* Logout button styling */
-.btn-link {
-  padding: 0 !important;
-  border: none !important;
-  background: none !important;
+/* NAVBAR LAYOUT */
+
+.container-fluid {
   position: relative;
-  padding-bottom: 5px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.btn-link::after {
-  content: '';
+/* CENTER NAV LINKS */
+
+.nav-links {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ff6b35;
-  transition: width 0.3s ease;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
 }
 
-.btn-link:hover::after {
-  width: 100%;
+/* RIGHT ACTIONS */
+
+.right-actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
