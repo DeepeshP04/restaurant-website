@@ -19,6 +19,7 @@ function HomeCarousel() {
               alt="..."
             />
             <div className="carousel-caption">
+              <img src="../public/logo.png" alt="logo" className="carousel-logo"/>
               <h1 className="display-3 fw-bold">Delicious Food</h1>
 
               <p className="fs-4">Taste the best dishes in town</p>
@@ -31,6 +32,7 @@ function HomeCarousel() {
               alt="..."
             />
             <div className="carousel-caption">
+              <img src="../public/logo.png" alt="logo" className="carousel-logo"/>
               <h1 className="display-3 fw-bold">Delicious Food</h1>
 
               <p className="fs-4">Taste the best dishes in town</p>
@@ -43,6 +45,7 @@ function HomeCarousel() {
               alt="..."
             />
             <div className="carousel-caption">
+              <img src="../public/logo.png" alt="logo" className="carousel-logo"/>
               <h1 className="display-3 fw-bold">Delicious Food</h1>
 
               <p className="fs-4">Taste the best dishes in town</p>

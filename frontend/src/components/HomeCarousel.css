@@ -27,3 +27,10 @@
 .carousel-caption {
     z-index: 2;
 }
+
+.carousel-logo {
+    padding-top: 230px;
+    height: 35vh !important;
+    width: 45vw !important;
+    margin: 0 auto;
+}

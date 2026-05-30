@@ -51,7 +51,8 @@ function Navbar() {
       <div className="container-fluid px-10 py-3">
         {/* LOGO */}
         <div className="d-flex align-items-center gap-3">
-          <i className="fa-solid fa-utensils fs-3"></i>
+          {/* <i className="fa-solid fa-utensils fs-3"></i> */}
+          <img src="../public/logo.png" alt="logo" style={{ height: "60px", width: "60px"}}/>
 
           <Link
             className="navbar-brand text-white d-flex flex-column mb-0"
