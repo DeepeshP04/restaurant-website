@@ -5,6 +5,7 @@ import "./Navbar.css";
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const dropdownRef = useRef(null);
 
@@ -47,7 +48,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar py-0 fixed-top custom-navbar">
+    <nav id="navbar" className="navbar py-0 fixed-top custom-navbar">
       <div className="container-fluid px-10 py-3">
         {/* LOGO */}
         <div className="d-flex align-items-center gap-3">
@@ -65,12 +66,27 @@ function Navbar() {
           </Link>
         </div>
 
-        {/* NAV LINKS */}
-<div className="nav-links d-flex align-items-center gap-5">
+        <button
+  className="mobile-menu-btn"
+  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+>
+  <i className={`fa-solid ${mobileMenuOpen ? "fa-xmark" : "fa-bars"}`}></i>
+</button>
 
-  <Link to="/" className="nav-link text-uppercase fs-12 fw-semibold">
-    Home
-  </Link>
+        {/* NAV LINKS */}
+<div
+  className={`nav-links ${
+    mobileMenuOpen ? "mobile-open" : ""
+  }`}
+>
+
+  <Link
+  to="/"
+  className="nav-link text-uppercase fs-12 fw-semibold"
+  onClick={() => setMobileMenuOpen(false)}
+>
+  Home
+</Link>
 
   <Link
     to="/menu"
