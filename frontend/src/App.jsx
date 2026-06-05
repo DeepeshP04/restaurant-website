@@ -5,6 +5,7 @@ import Gallery from "./pages/Gallery"
 import Book from "./pages/Book"
 import Contact from "./pages/Contact"
 import Auth from "./pages/Auth"
+import About from "./pages/About"
 import Footer from "./components/Footer"
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
       <Footer />
