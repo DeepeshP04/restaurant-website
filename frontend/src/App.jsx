@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home"
 import Menu from "./pages/Menu"
+import Gallery from "./pages/Gallery"
 import Book from "./pages/Book"
 import Contact from "./pages/Contact"
 import Auth from "./pages/Auth"
@@ -37,6 +38,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/book" element={<Book />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/auth" element={<Auth />} />
