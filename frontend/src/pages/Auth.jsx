@@ -185,32 +185,34 @@ function Auth() {
                 />
               </div>
 
-              <div className="mb-3">
-                <label htmlFor="signup-password" className="form-label">Password</label>
-                <input
-                  type="password"
-                  className="form-control auth-input"
-                  id="signup-password"
-                  name="password"
-                  placeholder="Enter password (min 6 characters)"
-                  value={signupData.password}
-                  onChange={handleSignupChange}
-                  required
-                />
-              </div>
+              <div className="password-row">
+                <div className="password-field">
+                  <label htmlFor="signup-password" className="form-label">Password</label>
+                  <input
+                    type="password"
+                    className="form-control auth-input"
+                    id="signup-password"
+                    name="password"
+                    placeholder="Min 6 characters"
+                    value={signupData.password}
+                    onChange={handleSignupChange}
+                    required
+                  />
+                </div>
 
-              <div className="mb-3">
-                <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-                <input
-                  type="password"
-                  className="form-control auth-input"
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  placeholder="Confirm password"
-                  value={signupData.confirmPassword}
-                  onChange={handleSignupChange}
-                  required
-                />
+                <div className="password-field">
+                  <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
+                  <input
+                    type="password"
+                    className="form-control auth-input"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm password"
+                    value={signupData.confirmPassword}
+                    onChange={handleSignupChange}
+                    required
+                  />
+                </div>
               </div>
 
               <button type="submit" className="btn btn-auth w-100 mb-3">
