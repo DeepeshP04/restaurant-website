@@ -102,6 +102,13 @@ function Navbar() {
     Gallery
   </Link>
 
+  <Link
+    to="/contact"
+    className="nav-link text-uppercase fs-12 fw-semibold"
+  >
+    Contact
+  </Link>
+
   {/* DROPDOWN */}
   <div className="nav-dropdown" ref={dropdownRef}>
     <button
@@ -126,14 +133,14 @@ function Navbar() {
         About
       </Link>
 
-      <Link
+      {/* <Link
         to="/contact"
         className="dropdown-item-custom"
         onClick={handleDropdownClose}
       >
         <i className="fa-solid fa-envelope"></i>
         Contact
-      </Link>
+      </Link> */}
     </div>
   </div>
 </div>
@@ -145,10 +152,10 @@ function Navbar() {
     to="/book"
     className="book-btn"
   >
-    Book Table
+    Book a Table
   </Link>
 
-  {isLoggedIn ? (
+  {/* {isLoggedIn ? (
     <>
       <Link
         to="/cart"
@@ -171,7 +178,7 @@ function Navbar() {
     >
       Login
     </Link>
-  )}
+  )} */}
         </div>
       </div>
     </nav>
