@@ -49,8 +49,7 @@ export default function Menu() {
         description: "Crispy bread with garlic butter and herbs",
         price: "$5.99",
         category: "starters",
-        image:
-          "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=500&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
       },
       {
         id: 6,
@@ -58,8 +57,7 @@ export default function Menu() {
         description: "Chilled shrimp with cocktail sauce",
         price: "$10.99",
         category: "starters",
-        image:
-          "https://images.unsplash.com/photo-1563379091339-03246963d96c?q=80&w=500&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=800&q=80",
       },
       {
         id: 7,

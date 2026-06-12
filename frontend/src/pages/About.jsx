@@ -76,7 +76,7 @@ export default function About() {
             </div>
             <div className="story-image">
               <img 
-                src="https://images.unsplash.com/photo-1504674900967-6e5ad14a7a0a?q=80&w=800&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
                 alt="Restaurant Interior"
               />
             </div>
@@ -110,7 +110,7 @@ export default function About() {
           <h2>Ready to Experience Excellence?</h2>
           <p>Book your table or contact us for special events and catering inquiries</p>
           <div className="cta-buttons">
-            <button className="btn btn-primary">Book a Table</button>
+            <Link className="btn btn-primary" to="/book">Book a Table</Link>
             <Link className="btn btn-secondary" to="/contact">Contact Us</Link>
           </div>
         </div>
