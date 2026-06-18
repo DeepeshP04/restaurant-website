@@ -6,6 +6,8 @@ import Book from "./pages/Book"
 import Contact from "./pages/Contact"
 import Auth from "./pages/Auth"
 import About from "./pages/About"
+import Privacy from "./pages/Privacy"
+import Agreement from "./pages/Agreement"
 import Footer from "./components/Footer"
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,6 +46,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Agreement />} />
         </Routes>
       </div>
       <Footer />

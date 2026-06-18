@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -137,21 +138,16 @@ function Footer() {
             </p>
           </div>
           <div className="col-md-6 col-sm-12 text-center text-md-end">
-            {/* <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', justifyContent: 'flex-end' }}>
-              <a href="#" style={{ color: '#ff6b35', textDecoration: 'none', fontSize: '0.85rem' }}>
+            <div className="footer-links">
+              <Link to="/privacy" style={{ color: '#ff6b35', textDecoration: 'none', fontSize: '0.85rem' }}>
                 Privacy Policy
-              </a>
-              <a href="#" style={{ color: '#ff6b35', textDecoration: 'none', fontSize: '0.85rem' }}>
+              </Link>
+              <Link to="/terms" style={{ color: '#ff6b35', textDecoration: 'none', fontSize: '0.85rem' }}>
                 Terms of Service
-              </a>
+              </Link>
               <a href="#" style={{ color: '#ff6b35', textDecoration: 'none', fontSize: '0.85rem' }}>
                 Sitemap
               </a>
-            </div> */}
-            <div className="footer-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Sitemap</a>
             </div>
           </div>
         </div>
